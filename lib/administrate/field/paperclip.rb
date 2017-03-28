@@ -13,6 +13,10 @@ module Administrate
 
       delegate :url, to: :data
 
+      def expiring_url
+        data.expiring_url if data.s3_permissions == :private
+      end
+
       def thumbnail
         style(thumbnail_style)
       end
