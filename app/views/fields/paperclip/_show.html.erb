@@ -2,4 +2,5 @@
 <%= link_to field.expiring_url, field.expiring_url if field.url.present? %>
 <% else -%>
 <%= link_to field.attribute, field.expiring_url, {:class => "media"} if field.url.present? %>
+<%= link_to "Download", field.expiring_url, {:download => field.attribute, :class => "btn btn-default"} %>
 <% end -%>
